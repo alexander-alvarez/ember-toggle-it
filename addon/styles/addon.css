@@ -1,0 +1,17 @@
+.ember-toggle-it--left {
+  -ms-transform: rotate(-90deg);
+  -webkit-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+}
+
+.ember-toggle-it--right {
+  -ms-transform: scaleX(-1) rotate(-90deg);;
+  -webkit-transform: scaleX(-1) rotate(-90deg);;
+  transform: scaleX(-1) rotate(-90deg);;
+}
+
+.ember-toggle-it--down {
+  -ms-transform: scaleY(-1);
+  -webkit-transform: scaleY(-1);
+  transform: scaleY(-1);
+}

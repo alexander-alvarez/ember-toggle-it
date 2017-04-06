@@ -1,5 +1,65 @@
-{{!-- The following component displays Ember's default welcome message. --}}
-{{welcome-page}}
-{{!-- Feel free to remove this! --}}
+<h1> Ember Toggle-It </h1>
 
-{{outlet}}
+
+<div>
+  <h2>Left-Right Mode</h2>
+  <br>
+  {{#toggle-it as |t| }}
+    {{ico-triangle class=t.class click=(action t.toggle)}}
+  {{/toggle-it}}
+
+</div>
+
+<div>
+  <h2>Up-Down Mode</h2>
+  <br>
+  {{#toggle-it toggleMode='^-v' index=index0 as |t| }}
+    {{ico-triangle class=t.class click=(action t.toggle)}}
+  {{/toggle-it}}
+</div>
+
+
+<div>
+  <h2>Left-Down Mode</h2>
+  <br>
+  {{#toggle-it toggleMode='<-v' index=index1 as |t| }}
+    {{ico-triangle class=t.class click=(action t.toggle)}}
+  {{/toggle-it}}
+</div>
+
+
+<div>
+  <h2>Right-Down Mode</h2>
+  <br>
+  {{#toggle-it toggleMode='>-v' index=index2 as |t| }}
+    {{ico-triangle class=t.class click=(action t.toggle)}}
+  {{/toggle-it}}
+</div>
+
+<p>
+  .... you get the picture
+</p>
+
+<br>
+<h2> Other Goodies</h2>
+
+<div>
+  <h2>Left-Right (rtl-mode)</h2>
+  {{#toggle-it index=index3 rtl=true as |t| }}
+    {{ico-triangle class=t.class click=(action t.toggle)}}
+  {{/toggle-it}}
+</div>
+
+<div>
+  <h2>Left-Down (rtl-mode)</h2>
+  {{#toggle-it toggleMode='<-v' index=index4 rtl=true as |t| }}
+    {{ico-triangle class=t.class click=(action t.toggle)}}
+  {{/toggle-it}}
+</div>
+
+<div>
+  <h2>Sequence of arbitrary length</h2>
+  {{#toggle-it toggleMode='^-<-v->' index=index5 as |t| }}
+    {{ico-triangle class=t.class click=(action t.toggle)}}
+  {{/toggle-it}}
+</div>

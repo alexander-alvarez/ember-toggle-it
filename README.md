@@ -4,6 +4,8 @@ Sick of having CSS classes sprinkled everywhere just to rotate an icon?
 Wish it could be more declarative to implement?
 `ember-toggle-it` will help you easily toggle it.
 
+Doesn't interfere with your DOM. Currently works with centered elements.
+
 ## Installation
 
 `ember install ember-toggle-it`
@@ -46,14 +48,6 @@ Left-Down (will be right-down in rtl-mode)
 ```hbs
 {{#toggle-it rtl=true value=value as |t| }}
    <a onclick={{action t.toggle}}>Icon </a>
-{{/toggle-it}}
-```
-
-**Supports clean DOM mode**
-
-```hbs
-{{#toggle-it tagName='' value=value as |t| }}
-   <a class="{{t.classes}}" onclick={{action t.toggle}}>Icon </a>
 {{/toggle-it}}
 ```
 
